@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
-import { FaDownload, FaCloud, FaLock, FaShieldAlt, FaCode, FaServer, FaKey, FaTerminal } from 'react-icons/fa';
+import { FaDownload, FaCloud, FaLock, FaShieldAlt, FaCode, FaServer, FaKey, FaTerminal, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Hero = () => {
     // Floating symbols configuration
@@ -28,7 +28,7 @@ const Hero = () => {
     ];
 
     return (
-        <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pb-20">
             {/* Floating Background Symbols */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 {floatingSymbols.map((symbol, index) => (
@@ -61,16 +61,16 @@ const Hero = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-neon-cyan font-mono mb-2 tracking-widest">SYSTEM_INIT_USER:</h2>
-                        <h1 className="text-5xl md:text-7xl font-bold mb-4 text-white glitch-text" data-text="Narendra Gadde">
+                        <h2 className="text-neon-cyan font-mono mb-0 tracking-widest text-sm md:text-base">SYSTEM_INIT_USER:</h2>
+                        <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white glitch-text" data-text="Narendra Gadde">
                             Narendra Gadde
                         </h1>
 
-                        <div className="text-xl md:text-2xl text-gray-400 font-mono mb-6 h-8">
+                        <div className="text-xl md:text-2xl text-gray-400 font-mono mb-6 h-8 flex items-center gap-2">
                             <span>&gt; </span>
                             <span className="text-neon-green">
                                 <Typewriter
-                                    words={['Cybersecurity Pro', 'Cloud Security Enthusiast', 'Network Automator', 'CEH Certified']}
+                                    words={['Cybersecurity Professional', 'Cloud Security Enthusiast', 'Network Automator', 'CEH Certified']}
                                     loop={0}
                                     cursor
                                     cursorStyle='_'
@@ -81,11 +81,20 @@ const Hero = () => {
                             </span>
                         </div>
 
-                        <p className="text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed border-l-2 border-neon-cyan pl-4">
+                        <p className="text-gray-400 mb-6 max-w-lg mx-auto md:mx-0 leading-relaxed border-l-2 border-neon-cyan pl-4">
                             Dedicated to securing modern cloud environments.
                             <br />
                             <span className="text-neon-cyan text-sm">Target: Azure & AWS Security Roles</span>
                         </p>
+
+                        <div className="flex flex-wrap gap-4 justify-center md:justify-start items-center mb-8">
+                            <a href="https://github.com/n4rendra-9adde" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-cyan transition-colors transform hover:scale-110">
+                                <FaGithub size={30} />
+                            </a>
+                            <a href="https://linkedin.com/in/narendrag18" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-cyan transition-colors transform hover:scale-110">
+                                <FaLinkedin size={30} />
+                            </a>
+                        </div>
 
                         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                             <a href="https://drive.google.com/file/d/1dG1efIMCXis36mIrWj4pzGerm07lqzAD/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-neon-cyan border border-neon-cyan text-black font-bold font-mono hover:bg-transparent hover:text-neon-cyan transition-all duration-300 uppercase tracking-widest flex items-center gap-2">
