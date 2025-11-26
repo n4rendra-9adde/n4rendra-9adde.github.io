@@ -39,7 +39,7 @@ const Error = () => {
 
                     <div className="flex gap-4 justify-center">
                         <Link
-                            to="/#contact"
+                            to="/"
                             className="inline-block px-8 py-3 bg-neon-cyan text-black font-bold font-mono hover:bg-neon-green transition-colors uppercase tracking-widest"
                         >
                             Try_Again()
