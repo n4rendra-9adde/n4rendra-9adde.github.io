@@ -5,7 +5,7 @@ const experiences = [
     {
         company: 'Ericsson India Pvt. Ltd.',
         role: 'Automated Operation Engineer',
-        period: 'Jul 2024 – Jul 2025',
+        period: '',
         description: [
             'Built RPA bots using UiPath and Python for ITIL process automation.',
             'Conducted validation and SLA compliance tracking for automation tools.',

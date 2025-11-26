@@ -97,6 +97,13 @@ const About = () => {
                                                 <div className="text-gray-500 text-xs">Azure Fundamentals</div>
                                             </div>
                                         </li>
+                                        <li className="flex items-start gap-3">
+                                            <FaCertificate className="text-neon-cyan mt-1" />
+                                            <div>
+                                                <div className="text-white font-bold">Oracle Cloud Infrastructure</div>
+                                                <div className="text-gray-500 text-xs">Certified Security Professional</div>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
