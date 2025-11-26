@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-dark-bg text-gray-200 font-sans overflow-x-hidden;
+  cursor: crosshair;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neon-cyan/50 rounded-full hover:bg-neon-cyan;
+}
+
+/* Scanline Effect */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.2));
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.15;
+}
+
+/* Glitch Text Utility */
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -1px 0 #00fff9;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(35px, 9999px, 11px, 0);
+  }
+
+  20% {
+    clip: rect(66px, 9999px, 86px, 0);
+  }
+
+  40% {
+    clip: rect(9px, 9999px, 36px, 0);
+  }
+
+  60% {
+    clip: rect(54px, 9999px, 2px, 0);
+  }
+
+  80% {
+    clip: rect(18px, 9999px, 96px, 0);
+  }
+
+  100% {
+    clip: rect(83px, 9999px, 4px, 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(15px, 9999px, 61px, 0);
+  }
+
+  20% {
+    clip: rect(86px, 9999px, 6px, 0);
+  }
+
+  40% {
+    clip: rect(29px, 9999px, 96px, 0);
+  }
+
+  60% {
+    clip: rect(4px, 9999px, 72px, 0);
+  }
+
+  80% {
+    clip: rect(78px, 9999px, 26px, 0);
+  }
+
+  100% {
+    clip: rect(33px, 9999px, 4px, 0);
+  }
+}

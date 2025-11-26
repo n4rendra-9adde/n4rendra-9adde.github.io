@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Insights & Stories</title>
+    <meta name="description" content="A premium interactive blog exploring design, technology, and culture.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Lumina<span class="dot">.</span></a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#featured" class="nav-link">Featured</a></li>
+                    <li><a href="#latest" class="nav-link">Latest</a></li>
+                    <li><a href="#topics" class="nav-link">Topics</a></li>
+                    <li><a href="#newsletter" class="nav-link button-primary">Subscribe</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">Design & Tech</span>
+                    <h1 class="hero-title">Exploring the <span class="gradient-text">Future</span> of Digital Interaction</h1>
+                    <p class="hero-subtitle">Dive into deep dives on UI/UX, frontend development, and the evolving landscape of the web.</p>
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Search articles...">
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="abstract-shape shape-1"></div>
+                    <div class="abstract-shape shape-2"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="section featured">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Stories</h2>
+                    <div class="controls">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="design">Design</button>
+                        <button class="filter-btn" data-filter="tech">Tech</button>
+                        <button class="filter-btn" data-filter="culture">Culture</button>
+                    </div>
+                </div>
+                <div class="grid" id="posts-grid">
+                    <!-- Posts will be injected here by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="section newsletter">
+            <div class="container newsletter-container">
+                <div class="newsletter-content">
+                    <h2>Stay in the Loop</h2>
+                    <p>Get the latest insights delivered directly to your inbox. No spam, just quality content.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="button-primary">Join Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">Lumina<span class="dot">.</span></a>
+                <p>&copy; 2024 Lumina Blog. All rights reserved.</p>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
